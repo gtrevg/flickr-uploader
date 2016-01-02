@@ -707,6 +707,8 @@ class Uploadr:
         while ( True ):
             self.upload()
             print("Last check: " + str( time.asctime(time.localtime())))
+            if SLEEP_TIME < 0:
+                break
             time.sleep( SLEEP_TIME )
 
     def createSets( self ):
